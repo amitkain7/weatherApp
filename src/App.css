@@ -1,0 +1,19 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:wght@300&family=Ubuntu&family=Ysabeau+Office:wght@200;800&display=swap');
+body{
+  margin: 0;
+  
+}
+
+/*  main box */
+.container{
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/images/background.jpg');
+  background-size: cover;
+
+  
+}

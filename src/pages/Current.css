@@ -1,0 +1,82 @@
+.show{
+
+    flex: 2;
+    border: none;
+    background-image: url('../assets/images/city.jpg');
+    background-size: cover; 
+    color: white;
+    height: 100%;
+    position: relative;
+    
+  }
+  
+  .title{
+     position: absolute;
+     top: 5%;
+     right: 5%;
+     
+  }
+  
+  .title  h1{
+    margin-bottom: 0;
+  }
+  .title  h3{
+    margin-top: 0;
+  }
+  
+  
+  
+  .current-date-time{
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    
+  }
+  
+   .time{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+  }
+  .temperature{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-size:80px;
+    font-weight: bold;
+    
+  }
+
+
+  .temperature > span{
+    font-size: 40px;
+  }  
+  
+  @media screen and (min-width : 200px ) and (max-width : 1200px){
+    .temperature{
+      display: none;
+    }
+    
+    .show{
+
+      flex: 4;
+      
+    }
+
+   .title h1{
+    font-size: 60px;
+   }
+   .title h3{
+    font-size: 60px;
+   }
+
+   .current-date-time {
+
+    font-size: 40px;
+   }
+   .time{
+    font-size: 40px;
+   }
+    
+  }
