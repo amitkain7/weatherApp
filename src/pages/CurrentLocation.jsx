@@ -17,7 +17,7 @@ function CurrentLocation() {
     city: undefined,
     country: undefined,
   });
-
+  const [loading, setloading] = useState(false)
   // get the lan and log of user
   const getPostion = () => {
     return new Promise((res, rej) => {
@@ -50,6 +50,7 @@ function CurrentLocation() {
   useEffect(() => {
     if (navigator.geolocation) {
       getPostion()
+      setloading(true)
         .then((position) => {
           getWeather(position.coords.latitude, position.coords.longitude);
 
@@ -75,30 +76,38 @@ function CurrentLocation() {
 
 
 
-  
-    return (
-      <div className="show">
 
-        <div className="title">
-          <h1>{state.city}</h1>
-          <h3>{state.country}</h3>
-        </div>
+  return (
+    <div className="show">
 
-        <div className="current-date-time">
-          <Currenttime />
-          {dateBuilder(new Date())}
-        </div>
-
-        <div className="temperature">
-         {state.temperatureC}°<span>C</span>
-        </div>
-
-        
-
-
+      <div className="title">
+        <h1>{state.city}</h1>
+        <h3>{state.country}</h3>
       </div>
 
-    )
+      <div className="current-date-time">
+        <Currenttime />
+        {dateBuilder(new Date())}
+      </div>
+      {
+        loading ?
+
+          <div className="temperature">
+
+            {state.temperatureC}°<span>C</span>
+          </div>
+          :
+          <div>
+
+          </div>
+      }
+
+
+
+
+    </div>
+
+  )
 
 
 }
