@@ -50,7 +50,7 @@ function CurrentLocation() {
   useEffect(() => {
     if (navigator.geolocation) {
       getPostion()
-      setloading(true)
+
         .then((position) => {
           getWeather(position.coords.latitude, position.coords.longitude);
 
@@ -89,18 +89,13 @@ function CurrentLocation() {
         <Currenttime />
         {dateBuilder(new Date())}
       </div>
-      {
-        loading ?
 
-          <div className="temperature">
 
-            {state.temperatureC}°<span>C</span>
-          </div>
-          :
-          <div>
 
-          </div>
-      }
+
+      {/* {state.temperatureC}°<span>C</span> */}
+
+
 
 
 
