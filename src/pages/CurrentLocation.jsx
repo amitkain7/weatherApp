@@ -17,7 +17,7 @@ function CurrentLocation() {
     city: undefined,
     country: undefined,
   });
-  const [loading, setloading] = useState(false)
+ 
   // get the lan and log of user
   const getPostion = () => {
     return new Promise((res, rej) => {
@@ -30,7 +30,7 @@ function CurrentLocation() {
     try {
       const api_call = await fetch(`${apikeys.BASE_URl}?lat=${lat}&lon=${lon}&units=metric&APPID=${apikeys.key}`)
       const data = await api_call.json();
-      // console.log(data)
+  
       setState({
         lat: lat,
         lon: lon,

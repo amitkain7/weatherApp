@@ -6,7 +6,7 @@ function Forcast() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
   const [state, setState] = useState("");
-  console.log(state)
+
   const search = async () => {
     try {
       if (query) {
